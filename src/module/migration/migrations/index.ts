@@ -198,3 +198,5 @@ export { Migration797MetagameSetting } from "./797-metagame-settings";
 export { Migration798WeaponToItemStatements } from "./798-weapon-to-item-statements";
 export { Migration799RMRecallKnowledgeDuplicates } from "./799-rm-recall-knowledge-duplicates";
 export { Migration800SelfEffectPanacheRage } from "./800-self-effect-panache-rage";
+export { Migration801ColorDarkvision } from "./801-color-darkvision";
+export { Migration802StripFeatActionCategory } from "./802-strip-feat-action-category";

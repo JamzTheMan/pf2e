@@ -1,8 +1,8 @@
 import {
     createAbilityModifier,
+    createProficiencyModifier,
     ensureProficiencyOption,
     ModifierPF2e,
-    ProficiencyModifier,
     StatisticModifier,
 } from "@actor/modifiers";
 import { AbilityString } from "@actor/types";
@@ -503,7 +503,7 @@ class SpellPF2e extends ItemPF2e {
         const systemData: SpellSystemData = this.system;
 
         const options = { ...htmlOptions, rollData };
-        const description = await game.pf2e.TextEditor.enrichHTML(this.description, { ...options, async: true });
+        const description = await TextEditor.enrichHTML(this.description, { ...options, async: true });
 
         const trickData = this.trickMagicEntry;
         const spellcasting = this.spellcasting;
@@ -682,7 +682,7 @@ class SpellPF2e extends ItemPF2e {
         modifiers.push(createAbilityModifier({ actor: this.actor, ability, domains }));
 
         const proficiencyRank = spellcastingEntry.rank;
-        modifiers.push(ProficiencyModifier.fromLevelAndRank(this.actor.level, proficiencyRank));
+        modifiers.push(createProficiencyModifier({ actor: this.actor, rank: proficiencyRank, domains }));
 
         const traits = this.system.traits.value;
 

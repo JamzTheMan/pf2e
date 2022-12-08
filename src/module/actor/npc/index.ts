@@ -1,7 +1,7 @@
 import { CreaturePF2e } from "@actor";
 import { Abilities } from "@actor/creature/data";
 import { SIZE_TO_REACH } from "@actor/creature/values";
-import { createStrikeStatistic } from "@actor/helpers";
+import { strikeFromMeleeItem } from "@actor/helpers";
 import { CheckModifier, ModifierPF2e, MODIFIER_TYPE, StatisticModifier } from "@actor/modifiers";
 import { SaveType } from "@actor/types";
 import { SAVE_TYPES, SKILL_DICTIONARY, SKILL_EXPANDED, SKILL_LONG_FORMS } from "@actor/values";
@@ -281,7 +281,6 @@ class NPCPF2e extends CreaturePF2e {
                 system.attributes.perception,
                 { overwrite: false }
             );
-            stat.adjustments = extractDegreeOfSuccessAdjustments(synthetics, domains);
             stat.base = base;
             stat.notes = extractNotes(rollNotes, domains);
             stat.value = stat.totalModifier;
@@ -303,6 +302,7 @@ class NPCPF2e extends CreaturePF2e {
                         dc: params.dc,
                         rollTwice,
                         notes: stat.notes,
+                        dosAdjustments: extractDegreeOfSuccessAdjustments(synthetics, domains),
                     },
                     params.event,
                     params.callback
@@ -357,6 +357,7 @@ class NPCPF2e extends CreaturePF2e {
                             dc: params.dc,
                             rollTwice,
                             notes,
+                            dosAdjustments: extractDegreeOfSuccessAdjustments(synthetics, domains),
                         };
 
                         const roll = await CheckPF2e.roll(
@@ -376,7 +377,6 @@ class NPCPF2e extends CreaturePF2e {
                 },
                 { overwrite: false }
             );
-            stat.adjustments = extractDegreeOfSuccessAdjustments(synthetics, domains);
             stat.value = stat.totalModifier;
             stat.breakdown = stat.modifiers
                 .filter((m) => m.enabled)
@@ -422,7 +422,6 @@ class NPCPF2e extends CreaturePF2e {
                     lore: !objectHasKey(SKILL_EXPANDED, skill),
                     ability,
                     rank: 1,
-                    adjustments: extractDegreeOfSuccessAdjustments(synthetics, domains),
                     notes: extractNotes(rollNotes, domains),
                     base,
                     expanded: skill,
@@ -448,6 +447,7 @@ class NPCPF2e extends CreaturePF2e {
                             dc: params.dc,
                             rollTwice,
                             notes: stat.notes,
+                            dosAdjustments: extractDegreeOfSuccessAdjustments(synthetics, domains),
                         };
 
                         const roll = await CheckPF2e.roll(
@@ -467,7 +467,7 @@ class NPCPF2e extends CreaturePF2e {
 
                 system.skills[shortform] = mergeObject(stat, additionalData);
             } else if (item.isOfType("melee")) {
-                system.actions.push(createStrikeStatistic(item));
+                system.actions.push(strikeFromMeleeItem(item));
             }
         }
 

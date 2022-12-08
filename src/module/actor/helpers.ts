@@ -1,5 +1,7 @@
 import { ActorPF2e } from "@actor";
 import { ItemPF2e, MeleePF2e } from "@item";
+import { MigrationList, MigrationRunner } from "@module/migration";
+import { MigrationRunnerBase } from "@module/migration/runner/base";
 import {
     extractDegreeOfSuccessAdjustments,
     extractModifierAdjustments,
@@ -12,6 +14,7 @@ import { CheckPF2e, CheckRoll } from "@system/check";
 import { DamageType, WeaponDamagePF2e } from "@system/damage";
 import { DamageRollPF2e, RollParameters } from "@system/rolls";
 import { ErrorPF2e, sluggify } from "@util";
+import { ActorSourcePF2e } from "./data";
 import { RollFunction, TraitViewData } from "./data/base";
 import { CheckModifier, ModifierPF2e, MODIFIER_TYPE, StatisticModifier } from "./modifiers";
 import { NPCStrike } from "./npc/data";
@@ -51,6 +54,22 @@ async function resetAndRerenderActors(actors?: Iterable<ActorPF2e>): Promise<voi
     }
 }
 
+async function migrateActorSource(source: PreCreate<ActorSourcePF2e>): Promise<ActorSourcePF2e> {
+    if (Object.keys(source).length === 2 && "name" in source && "type" in source) {
+        // The item consists of only a `name` and `type`: set schema version and skip
+        source.system = { schema: { version: MigrationRunnerBase.LATEST_SCHEMA_VERSION } };
+    }
+
+    const lowestSchemaVersion = Math.min(
+        source.system?.schema?.version ?? MigrationRunnerBase.LATEST_SCHEMA_VERSION,
+        ...(source.items ?? []).map((i) => i!.system?.schema?.version ?? MigrationRunnerBase.LATEST_SCHEMA_VERSION)
+    );
+    const actor = new ActorPF2e(source);
+    await MigrationRunner.ensureSchemaVersion(actor, MigrationList.constructFromVersion(lowestSchemaVersion));
+
+    return actor.toObject();
+}
+
 /** Find the lowest multiple attack penalty for an attack with a given item */
 function calculateMAPs(
     item: ItemPF2e,
@@ -69,7 +88,7 @@ function calculateMAPs(
 }
 
 /** Create a strike statistic from a melee item: for use by NPCs and Hazards */
-function createStrikeStatistic(item: Embedded<MeleePF2e>): NPCStrike {
+function strikeFromMeleeItem(item: Embedded<MeleePF2e>): NPCStrike {
     const { ability, traits, isMelee, isThrown } = item;
     const { actor } = item;
     if (!actor.isOfType("npc", "hazard")) {
@@ -131,7 +150,6 @@ function createStrikeStatistic(item: Embedded<MeleePF2e>): NPCStrike {
     }
 
     const statistic = new StatisticModifier(`${slug}-strike`, modifiers, baseOptions);
-    statistic.adjustments = extractDegreeOfSuccessAdjustments(synthetics, domains);
     const traitObjects = Array.from(traits).map(
         (t): TraitViewData => ({
             name: t,
@@ -226,12 +244,12 @@ function createStrikeStatistic(item: Embedded<MeleePF2e>): NPCStrike {
                         target: context.target,
                         domains,
                         options: context.options,
+                        traits: [attackTrait],
                         notes: rollNotes,
                         dc: params.dc ?? context.dc,
                         rollTwice: extractRollTwice(synthetics.rollTwice, domains, context.options),
                         substitutions: extractRollSubstitutions(synthetics.rollSubstitutions, domains, context.options),
-
-                        traits: [attackTrait],
+                        dosAdjustments: extractDegreeOfSuccessAdjustments(synthetics, domains),
                     },
                     params.event
                 );
@@ -255,7 +273,7 @@ function createStrikeStatistic(item: Embedded<MeleePF2e>): NPCStrike {
         (outcome: "success" | "criticalSuccess"): RollFunction =>
         async (params: RollParameters = {}) => {
             const domains = ["all", "strike-damage", "damage-roll"];
-            const context = actor.getDamageRollContext({
+            const context = actor.getStrikeRollContext({
                 item,
                 viewOnly: false,
                 domains,
@@ -358,4 +376,11 @@ interface MAPData {
     map2: number;
 }
 
-export { calculateMAPs, calculateRangePenalty, createStrikeStatistic, getRangeIncrement, resetAndRerenderActors };
+export {
+    calculateMAPs,
+    calculateRangePenalty,
+    getRangeIncrement,
+    migrateActorSource,
+    resetAndRerenderActors,
+    strikeFromMeleeItem,
+};

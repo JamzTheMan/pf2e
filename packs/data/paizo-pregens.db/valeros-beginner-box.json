@@ -239,9 +239,6 @@
             "name": "Attack of Opportunity",
             "sort": 0,
             "system": {
-                "actionCategory": {
-                    "value": ""
-                },
                 "actionType": {
                     "value": "passive"
                 },
@@ -299,9 +296,6 @@
             "name": "Shield Block",
             "sort": 0,
             "system": {
-                "actionCategory": {
-                    "value": ""
-                },
                 "actionType": {
                     "value": "passive"
                 },
@@ -628,9 +622,6 @@
             "name": "Shield Block",
             "sort": 0,
             "system": {
-                "actionCategory": {
-                    "value": ""
-                },
                 "actionType": {
                     "value": "reaction"
                 },
@@ -700,7 +691,7 @@
                 "items": {
                     "00b8b": {
                         "img": "systems/pf2e/icons/features/feats/feats.webp",
-                        "level": "1",
+                        "level": 1,
                         "name": "Assurance",
                         "uuid": "Compendium.pf2e.feats-srd.W6Gl9ePmItfDHji0"
                     }
@@ -735,9 +726,6 @@
             "name": "Assurance (Athletics)",
             "sort": 0,
             "system": {
-                "actionCategory": {
-                    "value": ""
-                },
                 "actionType": {
                     "value": "passive"
                 },
@@ -2382,9 +2370,6 @@
             "name": "Sudden Charge",
             "sort": 0,
             "system": {
-                "actionCategory": {
-                    "value": ""
-                },
                 "actionType": {
                     "value": "action"
                 },

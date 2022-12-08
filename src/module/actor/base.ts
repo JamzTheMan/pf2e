@@ -11,7 +11,6 @@ import type { ActiveEffectPF2e } from "@module/active-effect";
 import { ChatMessagePF2e } from "@module/chat-message";
 import { Size } from "@module/data";
 import { preImportJSON } from "@module/doc-helpers";
-import { MigrationList, MigrationRunner } from "@module/migration";
 import { RuleElementSynthetics } from "@module/rules";
 import { RuleElementPF2e } from "@module/rules/rule-element/base";
 import { RollOptionRuleElement } from "@module/rules/rule-element/roll-option";
@@ -19,7 +18,6 @@ import { LocalizePF2e } from "@module/system/localize";
 import { UserPF2e } from "@module/user";
 import { TokenDocumentPF2e } from "@scene";
 import { DicePF2e } from "@scripts/dice";
-import { eventToRollParams } from "@scripts/sheet-util";
 import { Statistic } from "@system/statistic";
 import { ErrorPF2e, isObject, objectHasKey, traitSlugToObject, tupleHasValue } from "@util";
 import type { CreaturePF2e } from "./creature";
@@ -28,7 +26,7 @@ import { GetReachParameters, ModeOfBeing } from "./creature/types";
 import { ActorDataPF2e, ActorSourcePF2e, ActorType } from "./data";
 import { ActorFlagsPF2e, BaseTraitsData, PrototypeTokenPF2e, RollOptionFlags, StrikeData } from "./data/base";
 import { ActorSizePF2e } from "./data/size";
-import { calculateRangePenalty, getRangeIncrement } from "./helpers";
+import { calculateRangePenalty, getRangeIncrement, migrateActorSource } from "./helpers";
 import { ActorInventory } from "./inventory";
 import { ItemTransfer } from "./item-transfer";
 import { ActorSheetPF2e } from "./sheet/base";
@@ -395,7 +393,7 @@ class ActorPF2e extends Actor<TokenDocumentPF2e, ItemTypeMap> {
         context: DocumentModificationContext<ActorPF2e> = {}
     ): Promise<Actor[]> {
         // Set additional defaults, some according to actor type
-        for (const datum of data) {
+        for (const datum of [...data]) {
             const { linkToActorSize } = datum.prototypeToken?.flags?.pf2e ?? {};
             const merged = mergeObject(datum, {
                 ownership: datum.ownership ?? { default: CONST.DOCUMENT_PERMISSION_LEVELS.NONE },
@@ -428,6 +426,9 @@ class ActorPF2e extends Actor<TokenDocumentPF2e, ItemTypeMap> {
                     merged.ownership.default = CONST.DOCUMENT_PERMISSION_LEVELS.LIMITED;
                     break;
             }
+
+            const migrated = await migrateActorSource(datum);
+            data.splice(data.indexOf(datum), 1, migrated);
         }
 
         return super.createDocuments(data, context);
@@ -604,9 +605,7 @@ class ActorPF2e extends Actor<TokenDocumentPF2e, ItemTypeMap> {
     /*  Rolls                                       */
     /* -------------------------------------------- */
 
-    protected getStrikeRollContext<I extends AttackItem>(
-        params: StrikeRollContextParams<I>
-    ): StrikeRollContext<this, I> {
+    getStrikeRollContext<I extends AttackItem>(params: StrikeRollContextParams<I>): StrikeRollContext<this, I> {
         const targetToken = Array.from(game.user.targets).find((t) => t.actor?.isOfType("creature", "hazard")) ?? null;
 
         const selfToken =
@@ -727,20 +726,6 @@ class ActorPF2e extends Actor<TokenDocumentPF2e, ItemTypeMap> {
                   }
                 : null,
         };
-    }
-
-    getDamageRollContext<I extends AttackItem>(params: StrikeRollContextParams<I>): StrikeRollContext<this, I> {
-        return this.getStrikeRollContext(params);
-    }
-
-    /**
-     * Roll a Save Check
-     * Prompt the user for input regarding Advantage/Disadvantage and any Situational Bonus.
-     * @deprecated
-     */
-    rollSave(event: JQuery.TriggeredEvent, saveType: SaveType): void {
-        console.warn("ActorPF2e#rollSaves is deprecated: use actor.saves[saveType].check.roll()");
-        this.saves?.[saveType]?.check.roll(eventToRollParams(event));
     }
 
     /**
@@ -1292,12 +1277,7 @@ class ActorPF2e extends Actor<TokenDocumentPF2e, ItemTypeMap> {
                 this._source.prototypeToken.texture.src = `systems/pf2e/icons/default-icons/${data.type}.svg`;
         }
 
-        await super._preCreate(data, options, user);
-
-        // Ensure imported actors are current on their schema version
-        if (!options.parent) {
-            await MigrationRunner.ensureSchemaVersion(this, MigrationList.constructFromVersion(this.schemaVersion));
-        }
+        return super._preCreate(data, options, user);
     }
 
     protected override async _preUpdate(
@@ -1321,7 +1301,9 @@ class ActorPF2e extends Actor<TokenDocumentPF2e, ItemTypeMap> {
             const clone = this.clone(changed, { keepId: true });
             this.flags.pf2e.rollOptions = clone.flags.pf2e.rollOptions;
             for (const rule of rules) {
-                await rule.preUpdateActor();
+                if (this.items.has(rule.item.id)) {
+                    await rule.preUpdateActor();
+                }
             }
         }
 

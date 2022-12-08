@@ -3,9 +3,6 @@
     "img": "systems/pf2e/icons/features/classes/devotion-spells.webp",
     "name": "Resonant Reflection: Reflection of Light",
     "system": {
-        "actionCategory": {
-            "value": ""
-        },
         "actionType": {
             "value": "passive"
         },
@@ -29,6 +26,12 @@
                 "acuity": "precise",
                 "key": "Sense",
                 "selector": "darkvision"
+            },
+            {
+                "key": "ActiveEffectLike",
+                "mode": "override",
+                "path": "flags.pf2e.colorDarkvision",
+                "value": true
             }
         ],
         "source": {
