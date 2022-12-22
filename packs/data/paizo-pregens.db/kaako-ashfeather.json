@@ -107,7 +107,7 @@
                     "value": null
                 },
                 "description": {
-                    "value": "<p>With your Sharp Beak, you are never without a weapon. You have a beak unarmed attack that deals [[/r {1d6}[piercing]]]{1d6 piercing damage}. Your beak is in the brawling weapon group and has the finesse and unarmed traits.</p>"
+                    "value": "<p>With your Sharp Beak, you are never without a weapon. You have a beak unarmed attack that deals [[/r 1d6[piercing]]] damage. Your beak is in the brawling weapon group and has the finesse and unarmed traits.</p>"
                 },
                 "featType": {
                     "value": "ancestryfeature"
@@ -1154,22 +1154,12 @@
             "name": "Potency Crystal",
             "sort": 2900000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": "1",
                     "value": "1"
                 },
@@ -1177,16 +1167,11 @@
                     "value": "talisman"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": null
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p><strong>Activate</strong> <span class=\"pf2-icon\">F</span> Envision</p>\n<p><strong>Trigger</strong> You make an attack with the affixed weapon, but you haven't rolled yet</p>\n<p>This fluorite crystal glows with a strange phosphorescence. When you activate the crystal, the weapon becomes a <em>+1 striking weapon</em> for the rest of the turn, gaining a +1 item bonus to the attack roll and increasing the damage on a hit to two weapon damage dice.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn"
@@ -1218,11 +1203,6 @@
                     }
                 },
                 "quantity": 1,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "potency-crystal",
@@ -1230,11 +1210,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1247,13 +1222,6 @@
                 },
                 "usage": {
                     "value": "affixed-to-weapon"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "-"
@@ -1272,22 +1240,12 @@
             "name": "Bolts",
             "sort": 3000000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 0,
                     "value": 0
                 },
@@ -1295,16 +1253,11 @@
                     "value": "ammo"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "held",
@@ -1338,11 +1291,6 @@
                     }
                 },
                 "quantity": 20,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "bolts",
@@ -1350,11 +1298,6 @@
                     "value": ""
                 },
                 "stackGroup": "bolts",
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1362,13 +1305,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -1571,22 +1507,12 @@
             "name": "Healing Potion (Lesser)",
             "sort": 3300000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -1594,16 +1520,11 @@
                     "value": "potion"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": "2d8+5"
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain [[/r {2d8+5}[healing]]]{2d8+5 Hit Points}.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "held",
@@ -1636,11 +1557,6 @@
                     }
                 },
                 "quantity": 1,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "healing-potion-lesser",
@@ -1648,11 +1564,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1666,13 +1577,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -2316,10 +2220,10 @@
                             }
                         },
                         "key": "Strike",
-                        "range": null,
-                        "traits": [
+                        "otherTags": [
                             "improvised"
-                        ]
+                        ],
+                        "range": null
                     },
                     {
                         "damageType": "fire",
@@ -2722,13 +2626,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -2849,13 +2747,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -2960,13 +2852,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -3785,22 +3671,12 @@
             "name": "Rations",
             "sort": 4200000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 7,
                     "value": 7
                 },
@@ -3808,16 +3684,11 @@
                     "value": "other"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": "twk19zpqQVrkpWec",
                 "description": {
                     "value": ""
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "stowed",
@@ -3850,11 +3721,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "rations",
@@ -3862,11 +3728,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -3874,13 +3735,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"

@@ -1367,10 +1367,10 @@
                             }
                         },
                         "key": "Strike",
-                        "range": null,
-                        "traits": [
+                        "otherTags": [
                             "improvised"
-                        ]
+                        ],
+                        "range": null
                     },
                     {
                         "damageType": "fire",
@@ -1670,22 +1670,12 @@
             "name": "Candle",
             "sort": 2600000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -1693,16 +1683,11 @@
                     "value": "other"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>A lit candle sheds dim light in a 10‑foot radius.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -1735,11 +1720,6 @@
                     }
                 },
                 "quantity": 10,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "candle",
@@ -1747,11 +1727,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1759,13 +1734,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "-"
@@ -1784,22 +1752,12 @@
             "name": "Healing Potion (Minor)",
             "sort": 2700000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -1807,16 +1765,11 @@
                     "value": "potion"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": "1d8"
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain [[/r {1d8}[healing]]]{1d8 Hit Points}.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -1849,11 +1802,6 @@
                     }
                 },
                 "quantity": 1,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "healing-potion-minor",
@@ -1861,11 +1809,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1879,13 +1822,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -2150,22 +2086,12 @@
             "name": "Rations",
             "sort": 2100000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 7,
                     "value": 7
                 },
@@ -2173,16 +2099,11 @@
                     "value": "other"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": "ia72LmGdwVfufuaA",
                 "description": {
                     "value": ""
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "stowed",
@@ -2215,11 +2136,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "rations",
@@ -2227,11 +2143,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -2239,13 +2150,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"

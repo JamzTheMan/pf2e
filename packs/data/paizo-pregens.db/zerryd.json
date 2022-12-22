@@ -1683,22 +1683,12 @@
             "name": "Bolts",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 0,
                     "value": 0
                 },
@@ -1706,16 +1696,11 @@
                     "value": "ammo"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "held",
@@ -1749,11 +1734,6 @@
                     }
                 },
                 "quantity": 10,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "bolts",
@@ -1761,11 +1741,6 @@
                     "value": ""
                 },
                 "stackGroup": "bolts",
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1773,13 +1748,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -1798,22 +1766,12 @@
             "name": "Black Adder Venom",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -1821,16 +1779,11 @@
                     "value": "potion"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
-                    "value": "<p>Adder venom is a simple but effective way to enhance a weapon.</p>\n<hr />\n<p><strong>Activate</strong> <span class=\"pf2-icon\">D</span> Interact (Injury)</p>\n<p><strong>Saving Throw</strong> DC 18 Fortitude</p>\n<p><strong>Maximum Duration</strong> 3 rounds</p>\n<p><strong>Stage 1</strong> [[/r {1d8}[poison]]]{1d8 poison damage} (1 round)</p>\n<p><strong>Stage 2</strong> [[/r {1d10}[poison]]]{1d10 poison damage} (1 round)</p>\n<p><strong>Stage 3</strong> [[/r {2d6}[poison]]]{2d6 poison damage} (1 round)</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
+                    "value": "<p>Adder venom is a simple but effective way to enhance a weapon.</p>\n<hr />\n<p><strong>Activate</strong> <span class=\"pf2-icon\">D</span> Interact (Injury)</p>\n<p><strong>Saving Throw</strong> DC 18 Fortitude</p>\n<p><strong>Maximum Duration</strong> 3 rounds</p>\n<p><strong>Stage 1</strong> [[/r 1d8[poison]]] damage (1 round)</p>\n<p><strong>Stage 2</strong> [[/r 1d10[poison]]] damage (1 round)</p>\n<p><strong>Stage 3</strong> [[/r 2d6[poison]]] damage (1 round)</p>"
                 },
                 "equipped": {
                     "carryType": "held",
@@ -1863,11 +1816,6 @@
                     }
                 },
                 "quantity": 5,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "black-adder-venom",
@@ -1875,11 +1823,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1892,13 +1835,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -1917,22 +1853,12 @@
             "name": "Healing Potion (Minor)",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -1940,16 +1866,11 @@
                     "value": "potion"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": "1d8"
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain [[/r {1d8}[healing]]]{1d8 Hit Points}.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "held",
@@ -1982,11 +1903,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "healing-potion-minor",
@@ -1994,11 +1910,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -2012,13 +1923,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -2142,22 +2046,12 @@
             "name": "Antidote (Lesser)",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -2165,16 +2059,11 @@
                     "value": "potion"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p><strong>Activate</strong> <span class=\"pf2-icon\">A</span> Interact</p>\n<p>An antidote protects you against toxins. Upon drinking an antidote, you gain a +2 item bonus to Fortitude saving throws against poisons for 6 hours.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.Effect: Antidote (Lesser)]{Effect: Antidote (Lesser)}</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "held",
@@ -2207,11 +2096,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "antidote-lesser",
@@ -2219,11 +2103,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -2235,13 +2114,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -2260,22 +2132,12 @@
             "name": "Simple Injury Poison",
             "sort": 100000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -2283,16 +2145,11 @@
                     "value": "poison"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
-                    "value": "<p>A simple but effective way to enhance a weapon.</p>\n<hr />\n<p><strong>Activate</strong> <span class=\"pf2-icon\">D</span> Interact (Injury)</p>\n<p><strong>Saving Throw</strong> DC 18 Fortitude</p>\n<p><strong>Maximum Duration</strong> 3 rounds</p>\n<p><strong>Stage 1</strong> [[/r {1d4}[poison]]]{1d4 poison damage} (1 round)</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
+                    "value": "<p>A simple but effective way to enhance a weapon.</p>\n<hr />\n<p><strong>Activate</strong> <span class=\"pf2-icon\">D</span> Interact (Injury)</p>\n<p><strong>Saving Throw</strong> DC 18 Fortitude</p>\n<p><strong>Maximum Duration</strong> 3 rounds</p>\n<p><strong>Stage 1</strong> [[/r 1d4[poison]]] damage (1 round)</p>"
                 },
                 "equipped": {
                     "carryType": "held",
@@ -2323,11 +2180,6 @@
                     "value": {}
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "black-adder-venom",
@@ -2335,11 +2187,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -2352,13 +2199,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"

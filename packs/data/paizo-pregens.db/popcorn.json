@@ -250,7 +250,7 @@
                         ],
                         "flag": "instinct",
                         "key": "ChoiceSet",
-                        "prompt": "Select an Instinct.",
+                        "prompt": "PF2E.SpecificRule.Barbarian.Instinct.Prompt",
                         "selection": "Compendium.pf2e.classfeatures.VDot7CDcXElxmkkz"
                     },
                     {
@@ -942,7 +942,7 @@
                         ],
                         "flag": "dragon",
                         "key": "ChoiceSet",
-                        "prompt": "Select a Dragon.",
+                        "prompt": "PF2E.SpecificRule.Barbarian.Dragon.Prompt",
                         "selection": "Compendium.pf2e.classfeatures.hyHgLQCDMSrR4RfE"
                     },
                     {
@@ -1482,22 +1482,12 @@
             "name": "Healing Potion (Minor)",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -1505,16 +1495,11 @@
                     "value": "potion"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": "1d8"
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain [[/r {1d8}[healing]]]{1d8 Hit Points}.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -1547,11 +1532,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "healing-potion-minor",
@@ -1559,11 +1539,6 @@
                     "value": "Pathfinder Core Rulebook"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1578,13 +1553,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -1603,22 +1571,12 @@
             "name": "Oil (1 pint)",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -1626,16 +1584,11 @@
                     "value": "oil"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>You can use oil to fuel lanterns, but you can also set a pint of oil aflame and throw it. You must first spend an Interact action preparing the oil, then throw it with another action as a ranged attack. If you hit, it splatters on the creature or in a single 5‑foot square you target. You must succeed at a @Check[type:flat|dc:10] for the oil to ignite successfully when it hits. If the oil ignites, the target takes 1d6 fire damage.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -1668,11 +1621,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "oil-1-pint",
@@ -1680,11 +1628,6 @@
                     "value": "Pathfinder Core Rulebook"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1692,13 +1635,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "-"

@@ -315,7 +315,7 @@
                         ],
                         "flag": "researchField",
                         "key": "ChoiceSet",
-                        "prompt": "Select a Research Field.",
+                        "prompt": "PF2E.SpecificRule.Alchemist.ResearchField.Prompt",
                         "selection": "Compendium.pf2e.classfeatures.7JbiaZ8bxODM5mzS"
                     },
                     {
@@ -1717,22 +1717,12 @@
             "name": "Bolts",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 0,
                     "value": 0
                 },
@@ -1740,16 +1730,11 @@
                     "value": "ammo"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn"
@@ -1782,11 +1767,6 @@
                     }
                 },
                 "quantity": 10,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "bolts",
@@ -1794,11 +1774,6 @@
                     "value": "Pathfinder Core Rulebook"
                 },
                 "stackGroup": "bolts",
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1806,13 +1781,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -2043,22 +2011,12 @@
             "name": "Chalk",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -2066,16 +2024,11 @@
                     "value": "other"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": "BShWAPVCyu7cWTvS",
                 "description": {
                     "value": ""
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn"
@@ -2108,11 +2061,6 @@
                     }
                 },
                 "quantity": 10,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "chalk",
@@ -2120,11 +2068,6 @@
                     "value": "Pathfinder Core Rulebook"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -2132,13 +2075,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "-"
@@ -2157,22 +2093,12 @@
             "name": "Rations",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 7,
                     "value": 7
                 },
@@ -2180,16 +2106,11 @@
                     "value": "other"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": "BShWAPVCyu7cWTvS",
                 "description": {
                     "value": ""
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn"
@@ -2221,11 +2142,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "rations",
@@ -2233,11 +2149,6 @@
                     "value": "Pathfinder Core Rulebook"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -2245,13 +2156,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -2850,22 +2754,12 @@
             "name": "Oil (1 pint)",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -2873,16 +2767,11 @@
                     "value": "oil"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": "BShWAPVCyu7cWTvS",
                 "description": {
                     "value": "<p>You can use oil to fuel lanterns, but you can also set a pint of oil aflame and throw it. You must first spend an Interact action preparing the oil, then throw it with another action as a ranged attack. If you hit, it splatters on the creature or in a single 5‑foot square you target. You must succeed at a @Check[type:flat|dc:10] for the oil to ignite successfully when it hits. If the oil ignites, the target takes 1d6 fire damage.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -2915,11 +2804,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "oil-1-pint",
@@ -2927,11 +2811,6 @@
                     "value": "Pathfinder Core Rulebook"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -2939,13 +2818,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "-"
@@ -3214,13 +3086,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -4218,7 +4084,7 @@
                         ],
                         "flag": "ringOfEnergyResistance",
                         "key": "ChoiceSet",
-                        "prompt": "Choose an energy type",
+                        "prompt": "PF2E.SpecificRule.Prompt.EnergyType",
                         "selection": "fire"
                     },
                     {
@@ -4848,13 +4714,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -5251,22 +5111,12 @@
             "name": "Elixir of Life (Lesser)",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -5274,16 +5124,11 @@
                     "value": "elixir"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": "3d6+6"
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p><strong>Activate</strong> <span class=\"pf2-icon\">A</span> Interact</p>\n<p>Elixirs of life accelerate a living creatures natural healing processes and immune system. Upon drinking this elixir, you regain [[/r {3d6+6}[healing]]]{3d6+6 Hit Points} and gain +1 item bonus to saving throws against diseases and poisons for 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.Effect: Elixir of Life (Lesser)]{Effect: Elixir of Life (Lesser)}</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -5316,11 +5161,6 @@
                     }
                 },
                 "quantity": 4,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "elixir-of-life-lesser",
@@ -5328,11 +5168,6 @@
                     "value": "Pathfinder Core Rulebook"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "temporary": true,
                 "traits": {
                     "custom": "",
@@ -5347,13 +5182,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"

@@ -91,7 +91,11 @@ class ItemPF2e extends Item<ActorPF2e> {
             ...traitOptions.map((t) => `${delimitedPrefix}${t}`),
         ];
 
-        if ("level" in this.system) options.push(`${delimitedPrefix}level:${this.system.level.value}`);
+        const level = "level" in this ? this.level : "level" in this.system ? this.system.level.value : null;
+        if (typeof level === "number") {
+            options.push(`${delimitedPrefix}level:${level}`);
+        }
+
         if (["item", ""].includes(prefix)) {
             const itemType = this.isOfType("feat") && this.isFeature ? "feature" : this.type;
             options.unshift(`${delimitedPrefix}type:${itemType}`);
@@ -411,7 +415,7 @@ class ItemPF2e extends Item<ActorPF2e> {
 
             const items = data.map((source) => {
                 if (!(context.keepId || context.keepEmbeddedIds)) {
-                    delete source._id; // Allow a random ID to be set by rule elements, which may toggle on `keepId`
+                    source._id = randomID();
                 }
                 return new ItemPF2e(source, { parent: actor }) as Embedded<ItemPF2e>;
             });
@@ -433,7 +437,7 @@ class ItemPF2e extends Item<ActorPF2e> {
 
         // Process item preCreate rules for all items that are going to be added
         // This may add additional items (such as via GrantItem)
-        for (const item of items.filter((item) => item.system.rules?.length)) {
+        for (const item of items) {
             // Pre-load this item's self: roll options for predication by preCreate rule elements
             item.prepareActorData?.();
 

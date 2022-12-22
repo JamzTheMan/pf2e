@@ -176,7 +176,7 @@
                         ],
                         "flag": "methodology",
                         "key": "ChoiceSet",
-                        "prompt": "Select a methodology.",
+                        "prompt": "PF2E.SpecificRule.Investigator.Methodology.Prompt",
                         "selection": "Compendium.pf2e.classfeatures.g3mNzNphtVxyR9Xr"
                     },
                     {
@@ -1657,22 +1657,12 @@
             "name": "Rations",
             "sort": 100000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 7,
                     "value": 7
                 },
@@ -1680,16 +1670,11 @@
                     "value": "other"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": "mm2nafqly7j9qr8i",
                 "description": {
                     "value": ""
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -1722,11 +1707,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "rations",
@@ -1734,11 +1714,6 @@
                     "value": "Pathfinder Core Rulebook"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1746,13 +1721,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -1835,10 +1803,10 @@
                             }
                         },
                         "key": "Strike",
-                        "range": null,
-                        "traits": [
+                        "otherTags": [
                             "improvised"
-                        ]
+                        ],
+                        "range": null
                     },
                     {
                         "damageType": "fire",
@@ -2214,22 +2182,12 @@
             "name": "Bolts",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 0,
                     "value": 0
                 },
@@ -2237,16 +2195,11 @@
                     "value": "ammo"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn"
@@ -2279,11 +2232,6 @@
                     }
                 },
                 "quantity": 10,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "bolts",
@@ -2291,11 +2239,6 @@
                     "value": "Pathfinder Core Rulebook"
                 },
                 "stackGroup": "bolts",
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -2303,13 +2246,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -3305,22 +3241,12 @@
             "name": "Forensic Dye",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -3328,16 +3254,11 @@
                     "value": "other"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p><strong>Activate</strong> <span class=\"pf2-icon\">1</span> Interact</p>\n<p>Activating this vial of colorless liquid requires inserting a small amount of another chemical or material, such as blood or mud. The vial reacts rapidly, transforming into a murky, reddish-brown substance.</p>\n<p>Once activated, the dye remains potent for up to 10 minutes, during which time you can spend 1 minute to brush it onto a single object of up to 1 Bulk or across the ground in a single 5-foot square. Where the dye comes in contact with an exact match for the activating chemical, it takes on a bright blue hue, while staying transparent in areas where there is no activating component present.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -3370,11 +3291,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "forensic-dye",
@@ -3382,11 +3298,6 @@
                     "value": "Pathfinder Advanced Player's Guide"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -3397,13 +3308,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -3559,22 +3463,12 @@
             "name": "Cognitive Mutagen (Moderate)",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -3582,16 +3476,11 @@
                     "value": "mutagen"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p><strong>Activate</strong> <span class=\"pf2-icon\">A</span> Interact</p>\n<hr />\n<p>Your mind becomes clear and cognition flows freely, but physical matters seem ephemeral.</p>\n<p><strong>Benefit</strong> You gain a +2 item bonus to Arcana, Crafting, Lore, Occultism, and Society checks and all checks to @UUID[Compendium.pf2e.actionspf2e.Recall Knowledge]{Recall Knowledge}. Your critical failures on @UUID[Compendium.pf2e.actionspf2e.Recall Knowledge]{Recall Knowledge} checks become failures instead.</p>\n<p><strong>Drawback</strong> You take a -2 penalty to weapon and unarmed attack rolls, Athletics checks, and acrobatics checks. You can carry 2 less Bulk than normal before becoming encumbered, and the maximum Bulk you can carry is reduced by 4.</p>\n<p><strong>Duration</strong> 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.Effect: Cognitive Mutagen (Moderate)]{Effect: Cognitive Mutagen (Moderate)}</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn"
@@ -3623,11 +3512,6 @@
                     }
                 },
                 "quantity": 1,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "cognitive-mutagen-moderate",
@@ -3635,11 +3519,6 @@
                     "value": "Pathfinder Core Rulebook"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -3653,13 +3532,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -3804,22 +3676,12 @@
             "name": "Origin Unguent",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": "1",
                     "value": "1"
                 },
@@ -3827,16 +3689,11 @@
                     "value": "potion"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p><strong>Activate</strong> <span class=\"pf2-icon\">1</span> Interact</p>\n<p>This shimmering, violet unguent forms mild chemical bonds between objects with a matching composition. You apply the adhesive to two objects, or to an object and a creature. You can check if the two share an origin (such as if they were broken from the same whole, or if a poison sample or body part came from the same creature) by holding them together with the unguent between; if they match, the unguent becomes sticky.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -3869,11 +3726,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "origin-unguent",
@@ -3881,11 +3733,6 @@
                     "value": "Pathfinder Advanced Player's Guide"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -3896,13 +3743,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"

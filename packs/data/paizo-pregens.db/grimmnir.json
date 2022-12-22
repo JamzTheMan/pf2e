@@ -1031,10 +1031,10 @@
                             }
                         },
                         "key": "Strike",
-                        "range": null,
-                        "traits": [
+                        "otherTags": [
                             "improvised"
-                        ]
+                        ],
+                        "range": null
                     },
                     {
                         "damageType": "fire",
@@ -1229,22 +1229,12 @@
             "name": "Candle",
             "sort": 2000000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -1252,16 +1242,11 @@
                     "value": "other"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>A lit candle sheds dim light in a 10‑foot radius.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -1294,11 +1279,6 @@
                     }
                 },
                 "quantity": 10,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "candle",
@@ -1306,11 +1286,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1318,13 +1293,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "-"
@@ -1343,22 +1311,12 @@
             "name": "Scroll of Ray of Enfeeblement (Level 1)",
             "sort": 2100000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": "1",
                     "value": "1"
                 },
@@ -1366,16 +1324,11 @@
                     "value": "scroll"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>Casting a Spell from a scroll requires holding the scroll in one hand and activating it with a Cast a Spell activity using the normal number of actions for that spell.</p>\n<p>To Cast a Spell from a scroll, the spell must appear on your spell list. Because you're the one Casting the Spell, use your spell attack roll and spell DC. The spell also gains the appropriate trait for your tradition (arcane, divine, occult, or primal).</p>\n<p>Any physical material components and costs are provided when a scroll is created, so you don't need to provide them when Casting a Spell from a scroll. You must replace any required material component for that spell with a somatic component. If the spell requires a focus, you must have that focus to Cast the Spell from a scroll.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -1408,11 +1361,6 @@
                     }
                 },
                 "quantity": 1,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "scroll-of-1st-level-spell",
@@ -1432,13 +1380,7 @@
                         "ability": {
                             "value": ""
                         },
-                        "area": {
-                            "areaType": "",
-                            "value": null
-                        },
-                        "areasize": {
-                            "value": ""
-                        },
+                        "area": null,
                         "category": {
                             "value": "spell"
                         },
@@ -1529,11 +1471,6 @@
                     "type": "spell"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1548,13 +1485,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -1573,22 +1503,12 @@
             "name": "Scroll of Mending (Level 1)",
             "sort": 2200000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": "1",
                     "value": "1"
                 },
@@ -1596,16 +1516,11 @@
                     "value": "scroll"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>Casting a Spell from a scroll requires holding the scroll in one hand and activating it with a Cast a Spell activity using the normal number of actions for that spell.</p>\n<p>To Cast a Spell from a scroll, the spell must appear on your spell list. Because you're the one Casting the Spell, use your spell attack roll and spell DC. The spell also gains the appropriate trait for your tradition (arcane, divine, occult, or primal).</p>\n<p>Any physical material components and costs are provided when a scroll is created, so you don't need to provide them when Casting a Spell from a scroll. You must replace any required material component for that spell with a somatic component. If the spell requires a focus, you must have that focus to Cast the Spell from a scroll.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -1638,11 +1553,6 @@
                     }
                 },
                 "quantity": 1,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "scroll-of-1st-level-spell",
@@ -1662,13 +1572,7 @@
                         "ability": {
                             "value": ""
                         },
-                        "area": {
-                            "areaType": "",
-                            "value": null
-                        },
-                        "areasize": {
-                            "value": ""
-                        },
+                        "area": null,
                         "category": {
                             "value": "spell"
                         },
@@ -1758,11 +1662,6 @@
                     "type": "spell"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1778,13 +1677,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -2479,13 +2371,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "focus"
                 },
@@ -2587,11 +2473,8 @@
                     "value": ""
                 },
                 "area": {
-                    "areaType": "emanation",
+                    "type": "emanation",
                     "value": 5
-                },
-                "areasize": {
-                    "value": "5-foot emanation"
                 },
                 "category": {
                     "value": "spell"
@@ -2695,13 +2578,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -2808,13 +2685,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -2929,11 +2800,8 @@
                     "value": ""
                 },
                 "area": {
-                    "areaType": "emanation",
+                    "type": "emanation",
                     "value": 30
-                },
-                "areasize": {
-                    "value": "30-foot emanation"
                 },
                 "category": {
                     "value": "spell"
@@ -3041,13 +2909,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -3154,13 +3016,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -3267,13 +3123,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -3494,22 +3344,12 @@
             "name": "Rations",
             "sort": 1600000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 7,
                     "value": 7
                 },
@@ -3517,16 +3357,11 @@
                     "value": "other"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": "7qZCkez22WWKesUM",
                 "description": {
                     "value": ""
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "stowed",
@@ -3559,11 +3394,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "rations",
@@ -3571,11 +3401,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -3583,13 +3408,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -3643,11 +3461,9 @@
                     "value": ""
                 },
                 "area": {
-                    "areaType": "emanation",
-                    "value": "30"
-                },
-                "areasize": {
-                    "value": "varies"
+                    "details": "varies",
+                    "type": "emanation",
+                    "value": 30
                 },
                 "category": {
                     "value": "spell"

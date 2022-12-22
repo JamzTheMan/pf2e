@@ -11,9 +11,10 @@ import {
     extractRollTwice,
 } from "@module/rules/util";
 import { CheckPF2e, CheckRoll } from "@system/check";
-import { DamageType, WeaponDamagePF2e } from "@system/damage";
-import { DamageRollPF2e, RollParameters } from "@system/rolls";
-import { ErrorPF2e, sluggify } from "@util";
+import { DamagePF2e, DamageType, WeaponDamagePF2e } from "@system/damage";
+import { DamageRoll } from "@system/damage/roll";
+import { RollParameters } from "@system/rolls";
+import { ErrorPF2e, getActionGlyph, getActionIcon, sluggify } from "@util";
 import { ActorSourcePF2e } from "./data";
 import { RollFunction, TraitViewData } from "./data/base";
 import { CheckModifier, ModifierPF2e, MODIFIER_TYPE, StatisticModifier } from "./modifiers";
@@ -130,9 +131,6 @@ function strikeFromMeleeItem(item: Embedded<MeleePF2e>): NPCStrike {
     modifiers.push(...StrikeAttackTraits.createAttackModifiers(item));
     const notes = extractNotes(synthetics.rollNotes, domains);
 
-    // action image
-    const { imageUrl, actionGlyph } = ActorPF2e.getActionGraphics("action", 1);
-
     const attackEffects: Record<string, string | undefined> = CONFIG.PF2E.attackEffects;
     const additionalEffects = item.attackEffects.map((tag) => {
         const label = attackEffects[tag] ?? actor.items.find((i) => (i.slug ?? sluggify(i.name)) === tag)?.name ?? tag;
@@ -161,9 +159,9 @@ function strikeFromMeleeItem(item: Embedded<MeleePF2e>): NPCStrike {
     const strike: NPCStrike = mergeObject(statistic, {
         label: item.name,
         type: "strike" as const,
-        glyph: actionGlyph,
+        glyph: getActionGlyph({ type: "action", value: 1 }),
         description: item.description,
-        imageUrl,
+        imageUrl: getActionIcon({ type: "action", value: 1 }),
         sourceId: item.id,
         attackRollType: item.isRanged ? "PF2E.NPCAttackRanged" : "PF2E.NPCAttackMelee",
         additionalEffects,
@@ -271,7 +269,7 @@ function strikeFromMeleeItem(item: Embedded<MeleePF2e>): NPCStrike {
 
     const damageRoll =
         (outcome: "success" | "criticalSuccess"): RollFunction =>
-        async (params: RollParameters = {}) => {
+        async (params: RollParameters = {}): Promise<Rolled<DamageRoll> | null> => {
             const domains = ["all", "strike-damage", "damage-roll"];
             const context = actor.getStrikeRollContext({
                 item,
@@ -283,28 +281,24 @@ function strikeFromMeleeItem(item: Embedded<MeleePF2e>): NPCStrike {
             const options = new Set([...context.options, ...traits, ...context.self.item.getRollOptions("item")]);
 
             if (!context.self.item.dealsDamage) {
-                return ui.notifications.warn("PF2E.ErrorMessage.WeaponNoDamage", { localize: true });
+                ui.notifications.warn("PF2E.ErrorMessage.WeaponNoDamage", { localize: true });
+                return null;
             }
 
             const damage = WeaponDamagePF2e.calculateStrikeNPC(
                 context.self.item,
                 context.self.actor,
                 [attackTrait],
-                deepClone(synthetics.statisticsModifiers),
-                deepClone(synthetics.modifierAdjustments),
-                deepClone(synthetics.damageDice),
                 1,
-                options,
-                synthetics.rollNotes,
-                synthetics.strikeAdjustments
+                options
             );
             if (!damage) throw ErrorPF2e("This weapon deals no damage");
 
             const { self, target } = context;
 
-            await DamageRollPF2e.roll(
+            return DamagePF2e.roll(
                 damage,
-                { type: "damage-roll", self, target, outcome, options, domains },
+                { type: "damage-roll", sourceType: "attack", self, target, outcome, options, domains },
                 params.callback
             );
         };

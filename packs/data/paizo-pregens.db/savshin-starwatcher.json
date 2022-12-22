@@ -756,7 +756,7 @@
                     "value": null
                 },
                 "description": {
-                    "value": "<p>Your sharp claws offer an alternative to the fists other humanoids bring to a fight. You have a claw unarmed attack that deals [[/r {1d4}[slashing]]]{1d4 slashing damage} and has the agile and finesse traits.</p>"
+                    "value": "<p>Your sharp claws offer an alternative to the fists other humanoids bring to a fight. You have a claw unarmed attack that deals [[/r 1d4[slashing]]] damage and has the agile and finesse traits.</p>"
                 },
                 "featType": {
                     "value": "ancestryfeature"
@@ -1356,10 +1356,10 @@
                             }
                         },
                         "key": "Strike",
-                        "range": null,
-                        "traits": [
+                        "otherTags": [
                             "improvised"
-                        ]
+                        ],
+                        "range": null
                     },
                     {
                         "damageType": "fire",
@@ -1554,22 +1554,12 @@
             "name": "Barkskin Potion",
             "sort": 2500000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": "1",
                     "value": "1"
                 },
@@ -1577,16 +1567,11 @@
                     "value": "potion"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>After you drink this bitter draft, your skin thickens like bark. You gain the effects of a 2nd-level <em>@UUID[Compendium.pf2e.spells-srd.Barkskin]{Barkskin}</em> spell for 10 minutes.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "worn",
@@ -1619,11 +1604,6 @@
                     }
                 },
                 "quantity": 1,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "barkskin-potion",
@@ -1631,11 +1611,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1648,13 +1623,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -2960,13 +2928,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -3072,12 +3034,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "value": ""
-                },
-                "areasize": {
-                    "value": "15-foot cone"
-                },
+                "area": null,
                 "category": {
                     "value": "focus"
                 },
@@ -3102,7 +3059,7 @@
                     }
                 },
                 "description": {
-                    "value": "<p>You fling a spray of tiny shooting stars, dealing [[/r {1d4}[fire]]]{1d4 fire damage}. Each creature in the area must attempt a Reflex save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Dazzled]{Dazzled} for 1 round.</p>\n<p><strong>Failure</strong> The creature takes full damage and is Dazzled for 3 rounds.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is</p>\n<p>Dazzled for 1 minute.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by [[/r {1d4}[fire]]].</p>"
+                    "value": "<p>You fling a spray of tiny shooting stars, dealing [[/r 1d4[fire]]] damage. Each creature in the area must attempt a Reflex save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Dazzled]{Dazzled} for 1 round.</p>\n<p><strong>Failure</strong> The creature takes full damage and is Dazzled for 3 rounds.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is</p>\n<p>Dazzled for 1 minute.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by [[/r {1d4}[fire]]].</p>"
                 },
                 "duration": {
                     "value": ""
@@ -3194,12 +3151,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "value": ""
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "focus"
                 },
@@ -3299,13 +3251,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -3411,13 +3357,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -3540,11 +3480,8 @@
                     "value": ""
                 },
                 "area": {
-                    "areaType": "emanation",
+                    "type": "emanation",
                     "value": 30
-                },
-                "areasize": {
-                    "value": "30-foot emanation"
                 },
                 "category": {
                     "value": "spell"
@@ -3652,13 +3589,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -3763,13 +3694,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -3876,13 +3801,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -3989,13 +3908,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -4102,13 +4015,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -4213,13 +4120,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -4322,13 +4223,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -4353,7 +4248,7 @@
                     }
                 },
                 "description": {
-                    "value": "<p>You shoot a blazing ray of light tinged with holy energy. Make a ranged spell attack. The ray deals 5d6 fire damage. If the target is a fiend or undead, you deal an extra 5d6 good damage.</p>\n<p>If the light passes through an area of magical darkness or targets a creature affected by magical darkness, searing light attempts to counteract the darkness. If you need to determine whether the light passes through an area of darkness, draw a line between yourself and the spell's target</p>\n<hr />\n<p><strong>Critical Success</strong> The target takes double fire damage, as well as double good damage if a fiend or undead.</p>\n<p><strong>Success</strong> The target takes full damage</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The fire damage increases by 2d6, and the good damage against fiends and undead increases by 2d6.</p>"
+                    "value": "<p>You shoot a blazing ray of light tinged with holy energy. Make a ranged spell attack. The ray deals 5d6 fire damage. If the target is a fiend or undead, you deal an extra [[/r 5d6[good]]] damage.</p>\n<p>If the light passes through an area of magical darkness or targets a creature affected by magical darkness, <em>searing light</em> attempts to counteract the darkness. If you need to determine whether the light passes through an area of darkness, draw a line between yourself and the spell's target</p>\n<hr />\n<p><strong>Critical Success</strong> The target takes double fire damage, as well as double good damage if a fiend or undead.</p>\n<p><strong>Success</strong> The target takes full damage</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The fire damage increases by 2d6, and the good damage against fiends and undead increases by 2d6.</p>"
                 },
                 "duration": {
                     "value": ""
@@ -4449,13 +4344,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -4558,13 +4447,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -4669,11 +4552,8 @@
                     "value": ""
                 },
                 "area": {
-                    "areaType": "burst",
+                    "type": "burst",
                     "value": 10
-                },
-                "areasize": {
-                    "value": "10-foot burst"
                 },
                 "category": {
                     "value": "spell"
@@ -4794,11 +4674,8 @@
                     "value": ""
                 },
                 "area": {
-                    "areaType": "emanation",
+                    "type": "emanation",
                     "value": 5
-                },
-                "areasize": {
-                    "value": "5-foot emanation"
                 },
                 "category": {
                     "value": "spell"
@@ -4902,13 +4779,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -5388,22 +5259,12 @@
             "name": "Rations",
             "sort": 2100000,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 7,
                     "value": 7
                 },
@@ -5411,16 +5272,11 @@
                     "value": "other"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": "Sz1CrVd3cXy0kv3n",
                 "description": {
                     "value": ""
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "stowed",
@@ -5453,11 +5309,6 @@
                     }
                 },
                 "quantity": 2,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "rations",
@@ -5465,11 +5316,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -5477,13 +5323,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -5543,11 +5382,9 @@
                     "value": ""
                 },
                 "area": {
-                    "areaType": "emanation",
-                    "value": "30"
-                },
-                "areasize": {
-                    "value": "varies"
+                    "details": "varies",
+                    "type": "emanation",
+                    "value": 30
                 },
                 "category": {
                     "value": "spell"
@@ -5786,11 +5623,9 @@
                     "value": ""
                 },
                 "area": {
-                    "areaType": "emanation",
-                    "value": "30"
-                },
-                "areasize": {
-                    "value": "varies"
+                    "details": "varies",
+                    "type": "emanation",
+                    "value": 30
                 },
                 "category": {
                     "value": "spell"

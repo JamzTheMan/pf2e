@@ -5,11 +5,12 @@ import { ActionTrait } from "@item/action/data";
 import { ConditionSlug } from "@item/condition/data";
 import { isCycle } from "@item/container/helpers";
 import { ItemSourcePF2e, ItemType, PhysicalItemSource } from "@item/data";
+import { ActionCost, ActionType } from "@item/data/base";
 import { hasInvestedProperty } from "@item/data/helpers";
 import { EffectFlags, EffectSource } from "@item/effect/data";
 import type { ActiveEffectPF2e } from "@module/active-effect";
 import { ChatMessagePF2e } from "@module/chat-message";
-import { Size } from "@module/data";
+import { OneToThree, Size } from "@module/data";
 import { preImportJSON } from "@module/doc-helpers";
 import { RuleElementSynthetics } from "@module/rules";
 import { RuleElementPF2e } from "@module/rules/rule-element/base";
@@ -19,7 +20,15 @@ import { UserPF2e } from "@module/user";
 import { TokenDocumentPF2e } from "@scene";
 import { DicePF2e } from "@scripts/dice";
 import { Statistic } from "@system/statistic";
-import { ErrorPF2e, isObject, objectHasKey, traitSlugToObject, tupleHasValue } from "@util";
+import {
+    ErrorPF2e,
+    getActionGlyph,
+    getActionIcon,
+    isObject,
+    objectHasKey,
+    traitSlugToObject,
+    tupleHasValue,
+} from "@util";
 import type { CreaturePF2e } from "./creature";
 import { VisionLevel, VisionLevels } from "./creature/data";
 import { GetReachParameters, ModeOfBeing } from "./creature/types";
@@ -608,8 +617,9 @@ class ActorPF2e extends Actor<TokenDocumentPF2e, ItemTypeMap> {
     getStrikeRollContext<I extends AttackItem>(params: StrikeRollContextParams<I>): StrikeRollContext<this, I> {
         const targetToken = Array.from(game.user.targets).find((t) => t.actor?.isOfType("creature", "hazard")) ?? null;
 
-        const selfToken =
-            canvas.tokens.controlled.find((t) => t.actor === this) ?? this.getActiveTokens().shift() ?? null;
+        const selfToken = canvas.ready
+            ? canvas.tokens.controlled.find((t) => t.actor === this) ?? this.getActiveTokens().shift() ?? null
+            : null;
         const reach = params.item.isOfType("melee")
             ? params.item.reach
             : params.item.isOfType("weapon")
@@ -641,6 +651,7 @@ class ActorPF2e extends Actor<TokenDocumentPF2e, ItemTypeMap> {
                               params.item.isMelee === weapon.isMelee
                           );
                       }) ?? params.item;
+        const itemOptions = selfItem.getRollOptions("item");
 
         const traitSlugs: ActionTrait[] = [
             "attack" as const,
@@ -658,11 +669,13 @@ class ActorPF2e extends Actor<TokenDocumentPF2e, ItemTypeMap> {
         // Clone the actor to recalculate its AC with contextual roll options
         const targetActor = params.viewOnly
             ? null
-            : targetToken?.actor?.getContextualClone([...selfActor.getSelfRollOptions("origin")]) ?? null;
+            : targetToken?.actor?.getContextualClone([...selfActor.getSelfRollOptions("origin"), ...itemOptions]) ??
+              null;
 
         // Target roll options
         const targetOptions = targetActor?.getSelfRollOptions("target") ?? [];
         if (targetToken && targetOptions.length > 0) {
+            targetOptions.push("target"); // An indicator that there is a target of any kind
             const mark = this.synthetics.targetMarks.get(targetToken.document.uuid);
             if (mark) targetOptions.push(`target:mark:${mark}`);
         }
@@ -671,7 +684,7 @@ class ActorPF2e extends Actor<TokenDocumentPF2e, ItemTypeMap> {
             ...params.options,
             ...selfOptions,
             ...targetOptions,
-            ...selfItem.getRollOptions("item"),
+            ...itemOptions,
             // Backward compatibility for predication looking for an "attack" trait by its lonesome
             "attack",
         ]);
@@ -1101,31 +1114,17 @@ class ActorPF2e extends Actor<TokenDocumentPF2e, ItemTypeMap> {
         return { updates, totalApplied };
     }
 
-    static getActionGraphics(actionType: string, actionCount?: number): { imageUrl: ImagePath; actionGlyph: string } {
-        let actionImg: number | string = 0;
-        if (actionType === "action") actionImg = actionCount ?? 1;
-        else if (actionType === "reaction") actionImg = "reaction";
-        else if (actionType === "free") actionImg = "free";
-        else if (actionType === "passive") actionImg = "passive";
-        const graphics: Record<string, { imageUrl: ImagePath; actionGlyph: string }> = {
-            1: { imageUrl: "systems/pf2e/icons/actions/OneAction.webp", actionGlyph: "A" },
-            2: { imageUrl: "systems/pf2e/icons/actions/TwoActions.webp", actionGlyph: "D" },
-            3: { imageUrl: "systems/pf2e/icons/actions/ThreeActions.webp", actionGlyph: "T" },
-            free: { imageUrl: "systems/pf2e/icons/actions/FreeAction.webp", actionGlyph: "F" },
-            reaction: { imageUrl: "systems/pf2e/icons/actions/Reaction.webp", actionGlyph: "R" },
-            passive: { imageUrl: "systems/pf2e/icons/actions/Passive.webp", actionGlyph: "" },
+    static getActionGraphics(type: ActionType, actionCount?: OneToThree): { imageUrl: ImagePath; actionGlyph: string } {
+        console.warn(
+            "PF2E System | ActorPF2e#getActionGraphics() is deprecated. If you rely on this function, please inform the Pathfinder2e dev team"
+        );
+
+        const actionCost: ActionCost | null = type === "passive" ? null : { type, value: actionCount ?? 1 };
+
+        return {
+            imageUrl: getActionIcon(actionCost),
+            actionGlyph: getActionGlyph(actionCost),
         };
-        if (objectHasKey(graphics, actionImg)) {
-            return {
-                imageUrl: graphics[actionImg].imageUrl,
-                actionGlyph: graphics[actionImg].actionGlyph,
-            };
-        } else {
-            return {
-                imageUrl: "systems/pf2e/icons/actions/Empty.webp",
-                actionGlyph: "",
-            };
-        }
     }
 
     /**

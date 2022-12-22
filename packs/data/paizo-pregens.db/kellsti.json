@@ -748,22 +748,12 @@
             "name": "Arrows",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 0,
                     "value": 0
                 },
@@ -771,16 +761,11 @@
                     "value": "ammo"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": ""
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>These projectiles are the ammunition for bows. The shaft of an arrow is made of wood. It is stabilized in flight by fletching at one end and bears a metal head on the other.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "held",
@@ -814,11 +799,6 @@
                     }
                 },
                 "quantity": 20,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "arrows",
@@ -826,11 +806,6 @@
                     "value": ""
                 },
                 "stackGroup": "arrows",
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -838,13 +813,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -1038,22 +1006,12 @@
             "name": "Healing Potion (Minor)",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
-                    "_deprecated": true,
-                    "value": true
-                },
-                "autoUse": {
                     "_deprecated": true,
                     "value": true
                 },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": 1,
                     "value": 1
                 },
@@ -1061,16 +1019,11 @@
                     "value": "potion"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": "1d8"
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain [[/r {1d8}[healing]]]{1d8 Hit Points}.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "held",
@@ -1103,11 +1056,6 @@
                     }
                 },
                 "quantity": 4,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "healing-potion-minor",
@@ -1115,11 +1063,6 @@
                     "value": ""
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1133,13 +1076,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -1227,22 +1163,12 @@
             "name": "Wand of Heal (Level 1)",
             "sort": 0,
             "system": {
-                "activation": {
-                    "condition": "",
-                    "cost": 0,
-                    "type": ""
-                },
                 "autoDestroy": {
                     "_deprecated": true,
                     "value": false
                 },
-                "autoUse": {
-                    "_deprecated": true,
-                    "value": true
-                },
                 "baseItem": null,
                 "charges": {
-                    "_deprecated": true,
                     "max": "1",
                     "value": "1"
                 },
@@ -1250,16 +1176,11 @@
                     "value": "wand"
                 },
                 "consume": {
-                    "_deprecated": true,
                     "value": null
                 },
                 "containerId": null,
                 "description": {
                     "value": "<p><em>@UUID[Compendium.pf2e.spells-srd.Heal]{Heal}</em></p><hr /><p>This baton is about a foot long and contains a single spell. The appearance typically relates to the spell within.</p>\n<p><strong>Activate</strong> Cast a Spell</p>\n<p><strong>Frequency</strong> once per day, plus overcharge</p>\n<hr />\n<p><strong>Effect</strong> You Cast the Spell at the indicated level.</p>\n<p><strong>Craft Requirements</strong> Supply a listed-level casting of the spell.</p>"
-                },
-                "duration": {
-                    "units": "",
-                    "value": null
                 },
                 "equipped": {
                     "carryType": "held",
@@ -1292,11 +1213,6 @@
                     }
                 },
                 "quantity": 1,
-                "range": {
-                    "long": null,
-                    "units": "",
-                    "value": null
-                },
                 "rules": [],
                 "size": "med",
                 "slug": "magic-wand-1st-level-spell",
@@ -1317,13 +1233,7 @@
                         "ability": {
                             "value": ""
                         },
-                        "area": {
-                            "areaType": "",
-                            "value": null
-                        },
-                        "areasize": {
-                            "value": "varies"
-                        },
+                        "area": null,
                         "category": {
                             "value": "spell"
                         },
@@ -1430,11 +1340,6 @@
                     "type": "spell"
                 },
                 "stackGroup": null,
-                "target": {
-                    "type": "",
-                    "units": "",
-                    "value": null
-                },
                 "traits": {
                     "custom": "",
                     "rarity": "common",
@@ -1447,13 +1352,6 @@
                 },
                 "usage": {
                     "value": "held-in-one-hand"
-                },
-                "uses": {
-                    "autoDestroy": false,
-                    "autoUse": true,
-                    "max": 0,
-                    "per": null,
-                    "value": 0
                 },
                 "weight": {
                     "value": "L"
@@ -1763,11 +1661,8 @@
                     "value": ""
                 },
                 "area": {
-                    "areaType": "emanation",
-                    "value": "30"
-                },
-                "areasize": {
-                    "value": "30-foot emanation"
+                    "type": "emanation",
+                    "value": 30
                 },
                 "category": {
                     "value": "spell"
@@ -1875,13 +1770,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -2000,13 +1889,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -2111,13 +1994,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -2222,13 +2099,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -2334,13 +2205,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": ""
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -2442,13 +2307,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -2552,13 +2411,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -2662,13 +2515,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": ""
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -2787,13 +2634,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": ""
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -3017,13 +2858,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": null
-                },
-                "areasize": {
-                    "value": "varies"
-                },
+                "area": null,
                 "category": {
                     "value": "spell"
                 },
@@ -3254,13 +3089,7 @@
                 "ability": {
                     "value": ""
                 },
-                "area": {
-                    "areaType": "",
-                    "value": ""
-                },
-                "areasize": {
-                    "value": "5-foot burst"
-                },
+                "area": null,
                 "category": {
                     "value": "focus"
                 },
@@ -3744,7 +3573,7 @@
                         ],
                         "flag": "doctrine",
                         "key": "ChoiceSet",
-                        "prompt": "Select a doctrine.",
+                        "prompt": "PF2E.SpecificRule.Cleric.Doctrine.Prompt",
                         "selection": "Compendium.pf2e.classfeatures.ZZzLMOUAtBVgV1DF"
                     },
                     {
@@ -4663,11 +4492,9 @@
                     "value": ""
                 },
                 "area": {
-                    "areaType": "emanation",
-                    "value": "30"
-                },
-                "areasize": {
-                    "value": "varies"
+                    "details": "varies",
+                    "type": "emanation",
+                    "value": 30
                 },
                 "category": {
                     "value": "spell"
